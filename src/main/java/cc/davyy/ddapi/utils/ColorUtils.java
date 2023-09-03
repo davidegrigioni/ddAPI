@@ -9,5 +9,4 @@ public class ColorUtils {
 
     public static Component colorize(String message) { return MiniMessage.miniMessage().deserialize(message); }
 
-
 }

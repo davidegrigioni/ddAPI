@@ -10,6 +10,7 @@ public abstract class DdAPI {
 
     public static @NotNull DdAPI getInstance() {
         if (instance == null) throw new IllegalStateException();
+
         return instance;
     }
 
