@@ -1,4 +1,4 @@
-package cc.davyy.ddapi.model;
+package cc.davyy.ddapi.utils.geometry;
 
 import lombok.Getter;
 import org.bukkit.Location;

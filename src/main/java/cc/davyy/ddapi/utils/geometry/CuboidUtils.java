@@ -1,6 +1,5 @@
-package cc.davyy.ddapi.utils;
+package cc.davyy.ddapi.utils.geometry;
 
-import cc.davyy.ddapi.model.Cuboid;
 import lombok.Getter;
 import org.bukkit.Location;
 import org.bukkit.World;

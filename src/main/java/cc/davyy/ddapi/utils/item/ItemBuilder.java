@@ -1,4 +1,4 @@
-package cc.davyy.ddapi.utils;
+package cc.davyy.ddapi.utils.item;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
