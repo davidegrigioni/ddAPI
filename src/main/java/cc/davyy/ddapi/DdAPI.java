@@ -1,17 +1,16 @@
 package cc.davyy.ddapi;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import lombok.Setter;
+import org.jetbrains.annotations.NotNull;
 
-public final class DdAPI extends JavaPlugin {
+public abstract class DdAPI {
 
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
+    @Setter
+    private static DdAPI instance;
 
+    public static @NotNull DdAPI getInstance() {
+        if (instance == null) throw new IllegalStateException();
+        return instance;
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
 }

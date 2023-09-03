@@ -1,4 +1,4 @@
 name: ddAPI
 version: '${project.version}'
 main: cc.davyy.ddapi.DdAPI
-api-version: '1.20'
+api-version: '1.13'
