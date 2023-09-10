@@ -2,6 +2,9 @@ package cc.davyy.ddapi.utils.item;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
@@ -34,6 +37,46 @@ public class ItemBuilder {
 
     public ItemBuilder lore(@NotNull Component... lore) {
         return lore(Arrays.asList(lore));
+    }
+
+    public ItemBuilder enchant(Enchantment enchantment, int level) {
+        itemMeta.addEnchant(enchantment, level, true);
+        return this;
+    }
+
+    public ItemBuilder unbreakable(boolean unbreakable) {
+        itemMeta.setUnbreakable(unbreakable);
+        return this;
+    }
+
+    public ItemBuilder amount(int amount) {
+        item.setAmount(amount);
+        return this;
+    }
+
+    public ItemBuilder customModelData(int customModelData) {
+        itemMeta.setCustomModelData(customModelData);
+        return this;
+    }
+
+    public ItemBuilder flags(ItemFlag... flags) {
+        itemMeta.addItemFlags(flags);
+        return this;
+    }
+
+    public ItemBuilder clearEnchantments() {
+        itemMeta.getEnchants().keySet().forEach(itemMeta::removeEnchant);
+        return this;
+    }
+
+    public ItemBuilder clearLore() {
+        itemMeta.lore(null);
+        return this;
+    }
+
+    public ItemBuilder clearAttributes(Attribute attribute) {
+        itemMeta.removeAttributeModifier(attribute);
+        return this;
     }
 
     public ItemStack build() {

@@ -1,18 +1,10 @@
 package cc.davyy.ddapi.managers;
 
 import cc.davyy.ddapi.DdAPI;
-import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitTask;
 
 public class TaskManager {
-
-    @Getter
-    private static TaskManager instance;
-
-    private TaskManager() {
-        instance = this;
-    }
 
     public BukkitTask runTask(Runnable task) {
         // Run a synchronous task
