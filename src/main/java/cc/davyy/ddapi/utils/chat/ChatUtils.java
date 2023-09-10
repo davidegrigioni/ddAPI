@@ -1,4 +1,4 @@
-package cc.davyy.ddapi.utils;
+package cc.davyy.ddapi.utils.chat;
 
 import net.kyori.adventure.bossbar.BossBar;
 import net.kyori.adventure.text.Component;
@@ -11,7 +11,6 @@ import java.time.Duration;
 public class ChatUtils {
 
     private ChatUtils() {}
-
 
     /**
      * Sends a colored message to a player.
