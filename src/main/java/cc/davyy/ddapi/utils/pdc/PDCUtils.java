@@ -8,6 +8,8 @@ import org.bukkit.persistence.PersistentDataType;
 
 public class PDCUtils {
 
+    private PDCUtils() {}
+
     public static void setCustomData(Entity entity, String key, Object value) {
         PersistentDataContainer pdc = entity.getPersistentDataContainer();
         pdc.set(new NamespacedKey(DdAPI.getInstance(), key), PersistentDataType.STRING, value.toString());

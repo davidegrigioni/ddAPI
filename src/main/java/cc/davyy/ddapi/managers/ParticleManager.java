@@ -5,19 +5,14 @@ import org.bukkit.Location;
 
 public class ParticleManager {
 
+    /**
+     * Creates and spawns a particle at the specified location with custom settings.
+     *
+     * @param location        The location where the particle should be spawned.
+     * @param particleBuilder The ParticleBuilder instance containing particle settings.
+     */
     public static void createParticle(Location location, ParticleBuilder particleBuilder) {
         particleBuilder.spawn();
     }
-
-    /*
-    Location particleLocation =
-    ParticleBuilder particleBuilder = new ParticleBuilder(Particle.HEART)
-            .count(1)
-            .extra(0.5)
-            .offset(0.1, 0.1, 0.1)
-            .velocity(0.1, 0.1, 0.1);
-
-    ParticleManager.createParticle(particleLocation, particleBuilder);
-     */
 
 }

@@ -4,6 +4,8 @@ import org.bukkit.util.Vector;
 
 public class VectorUtils {
 
+    private VectorUtils() {}
+
     /**
      * Add two vectors and return the result.
      *
